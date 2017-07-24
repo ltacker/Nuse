@@ -1,0 +1,34 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+nuse:
+    path:  /nuse
+    defaults:  { _controller: AppBundle:Nuse:nuse }
+
+likegrid:
+    path:  /like/grid
+    defaults: { _controller: AppBundle:Nuse:likegrid }
+
+like_delete:
+    path:  /like/likedelete
+    defaults: { _controller: AppBundle:Nuse:likedelete }
+
+like_edit:
+    path:  /like/likeedit
+    defaults: { _controller: AppBundle:Nuse:likeedit }
+
+addlike:
+    path: /like/addlike
+    defaults: { _controller: AppBundle:Nuse:addlike }
+    options:
+        expose: true
+
+go:
+    path: /like/go
+    defaults: { _controller: AppBundle:Nuse:go }
+    options:
+        expose: true
